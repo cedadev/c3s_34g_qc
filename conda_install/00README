@@ -1,0 +1,31 @@
+
+these env files were exported and can in principle be used to build conda env, but provided that the
+packages at the specified versions are still available
+
+the installation was actually done without specifying exact versions
+
+
+to avoid accidentally putting stuff into the root conda env, the miniconda directory is 
+recursively made read-only and then write permission added to only the envs/ and pkg/ 
+subdirectories (and their contents)
+
+
+CMOR:
+install miniconda3 and add the bin directory to path
+then
+conda create -n qc
+source activate qc
+conda install -c pcmdi cmor
+
+
+esgprep:
+install miniconda2 and add the bin directory to path
+then
+conda create -n esgprep
+source activate esgprep
+conda install pip python=2.7
+pip install esgprep
+
+(the conda install pip is because otherwise the pip install finds pip only in the
+base conda env + tries to pip install esgprep there)
+

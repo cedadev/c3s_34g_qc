@@ -1,0 +1,5 @@
+data meant to fail
+
+The orog_fx_bad_piControl_r1i1p1f2_gn.nc is actually an identical copy of orog_fx_UKESM1-0-LL_piControl_r1i1p1f2_gn.nc but it will fail because of the filename
+
+The sbl_Amon_CNRM-CM6-1_control-1950_r1i1p1f2_gr_*.nc are modified copies where the mip_era global attribute has been corrupted using ncatted
